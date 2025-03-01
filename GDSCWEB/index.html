@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC Kabete</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+ <!-- Responsive Navbar Section -->
+ <nav class="bg-white shadow-lg p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-700">GDSC Kabete</h1>
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <ul id="menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="#" class="hover:text-blue-600 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+            <li><a href="#events" class="hover:text-blue-600 transition">Events</a></li>
+            <li><a href="#join" class="hover:text-blue-600 transition">Join Us</a></li>
+        </ul>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-white py-4 space-y-4 shadow-md">
+        <a href="#" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#events" class="hover:text-blue-600">Events</a>
+        <a href="#join" class="hover:text-blue-600">Join Us</a>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+
+
+     <!-- Premium Hero Section -->
+     <section class="relative bg-gray-900 text-white text-center py-40 px-6 flex flex-col items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('images/background.jpg');"></div>
+        <div class="relative max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">Google Developer Student Club</h2>
+            <p class="mt-6 text-lg md:text-xl text-gray-300">Empowering students through cutting-edge technology at Kabete University.</p>
+            <a href="#join" class="mt-8 inline-block bg-blue-600 text-white text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Exclusive About Section -->
+    <section id="about" class="py-20 px-6 bg-white text-gray-800">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">About GDSC Kabete</h3>
+                <p class="mt-6 text-lg text-gray-600">GDSC Kabete is an elite community of innovators, developers, and tech leaders. Our mission is to bridge the gap between academia and industry by fostering an environment of collaboration, learning, and growth.</p>
+                <p class="mt-4 text-lg text-gray-600">With access to world-class resources, mentorship, and real-world projects, we empower students to build cutting-edge solutions and shape the future of technology.</p>
+            </div>
+            <div class="relative">
+                <img src="images/about.jpg" alt="GDSC Cambridge" class="rounded-lg shadow-lg">
+                <div class="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 text-sm font-semibold rounded-br-lg">Elite Community</div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Exclusive Events Section -->
+   <section id="events" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-4xl font-extrabold text-gray-900">Upcoming Events</h3>
+        <p class="mt-4 text-lg text-gray-600">Engage with top-tier workshops, hackathons, and networking sessions.</p>
+    </div>
+    <div class="max-w-6xl mx-auto mt-10 grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="images/machine.jpg" alt="Workshop" class="w-full">
+            <div class="p-6">
+                <h4 class="text-2xl font-bold">Learning Workshops</h4>
+                <p class="text-gray-600 mt-2">Dive into concepts with hands-on projects.</p>
+                <p class="text-gray-500 mt-2">Date: Every Tuesday</p>
+                <a href="https://forms.gle/YFN99XYH8bXE5NU89" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Book Now</a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="images/hackathon.jpg" alt="Hackathon" class="w-full">
+            <div class="p-6">
+                <h4 class="text-2xl font-bold">Annual Hackathon</h4>
+                <p class="text-gray-600 mt-2">Collaborate and build innovative tech solutions.</p>
+                <p class="text-gray-500 mt-2">Date: Every Thursday</p>
+                <a href="https://forms.gle/XXTuifRNqSvKHu2c7" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Book Now</a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="images/networking.jpg" alt="Networking" class="w-full">
+            <div class="p-6">
+                <h4 class="text-2xl font-bold">Tech Networking Event</h4>
+                <p class="text-gray-600 mt-2">Meet industry leaders and expand your network.</p>
+                <p class="text-gray-500 mt-2">Date: Every Wednesday</p>
+                <a href="https://forms.gle/QcQ2Dzx2GvvGKyDK8" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Join Us Section -->
+   <section id="join" class="bg-blue-50 py-20 px-6 text-center">
+    <div class="max-w-6xl mx-auto">
+        <h3 class="text-4xl font-extrabold text-gray-900">Join GDSC Kabete</h3>
+        <p class="mt-4 text-lg text-gray-600">Become part of an exclusive community of developers, innovators, and tech enthusiasts.</p>
+    </div>
+    <div class="max-w-4xl mx-auto mt-10 grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+            <div class="text-blue-600 text-5xl">
+                🔥
+            </div>
+            <h4 class="text-2xl font-bold mt-4">Hands-on Learning</h4>
+            <p class="text-gray-600 mt-2">Gain experience with Google technologies through workshops and projects.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+            <div class="text-green-600 text-5xl">
+                🤝
+            </div>
+            <h4 class="text-2xl font-bold mt-4">Networking</h4>
+            <p class="text-gray-600 mt-2">Connect with industry leaders, mentors, and fellow students.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+            <div class="text-yellow-600 text-5xl">
+                🚀
+            </div>
+            <h4 class="text-2xl font-bold mt-4">Career Growth</h4>
+            <p class="text-gray-600 mt-2">Boost your resume with real-world projects and certifications.</p>
+        </div>
+    </div>
+    <a href="https://forms.gle/MfFHDK7XfoN2hZH9A" class="mt-8 inline-block bg-blue-600 text-white text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all">Join Now</a>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white text-center py-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+            <div>
+                <h4 class="text-lg font-semibold">Contact Us</h4>
+                <p class="text-gray-400">Email: gdsc40855@gmail.com</p>
+                <p class="text-gray-400">Phone: 0796956137</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">Follow Us</h4>
+                <p class="text-gray-400">Coming Soon!!!</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">© 2025 GDSC Kabete</h4>
+                <p class="text-gray-400">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+ <!-- Created by Otiro John Otieno -->
